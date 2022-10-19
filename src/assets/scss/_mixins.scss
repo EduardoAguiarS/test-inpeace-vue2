@@ -1,0 +1,32 @@
+@mixin container {
+  display: block;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 1rem;
+}
+
+@mixin button($color, $background-color) {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+
+  background-color: $background-color;
+  color: $color;
+
+  width: 100%;
+  display: block;
+  padding: 0.875rem 0;
+
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 100%;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover {
+    background-color: darken($background-color, 10%);
+  }
+}

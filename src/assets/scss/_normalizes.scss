@@ -1,0 +1,31 @@
+// Reset:
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+// Defaults:
+body {
+  background-color: $gray;
+}
+
+button,
+input,
+textarea,
+body {
+  font-family: $helvetica;
+  font-weight: 400;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
