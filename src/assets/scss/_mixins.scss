@@ -30,3 +30,57 @@
     background-color: darken($background-color, 10%);
   }
 }
+
+@mixin title-lg {
+  font-family: $helvetica;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.4;
+
+  color: $primary;
+}
+
+@mixin title-md {
+  font-family: $helvetica;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.4;
+
+  color: $primary;
+}
+
+@mixin content-gray-lg {
+  font-family: $helvetica;
+  font-size: 1.375rem;
+  font-weight: medium;
+  line-height: 1.4;
+
+  color: $gray;
+}
+
+@mixin content-primary-md {
+  font-family: $helvetica;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.4;
+
+  color: $primary;
+}
+
+@mixin content-gray-md {
+  font-family: $helvetica;
+  font-size: 1rem;
+  font-weight: medium;
+  line-height: 1.4;
+
+  color: $gray;
+}
+
+@mixin content-dark-md {
+  font-family: $helvetica;
+  font-size: 1rem;
+  font-weight: medium;
+  line-height: 1.4;
+
+  color: $dark;
+}
