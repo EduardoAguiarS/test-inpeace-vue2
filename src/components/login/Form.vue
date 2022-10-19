@@ -34,12 +34,50 @@
         </p>
       </div>
     </form>
+    <div class="login__form--error" v-if="error"><span>{{ error }}</span></div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'LoginForm',
+
+  data() {
+    return {
+      email: '',
+      password: '',
+      error: '',
+      users: [],
+    };
+  },
+
+  methods: {
+    login() {
+      // Check if user exists
+      const user = this.users.find((u) => u.email === this.email);
+
+      // If user exists, check if password is correct
+      if (user && user.password === this.password) {
+        this.$router.push('/register');
+      } else {
+        this.error = 'Usuário ou senha incorretos';
+      }
+    },
+  },
+
+  watch: {
+    email() {
+      this.error = '';
+    },
+    password() {
+      this.error = '';
+    },
+  },
+
+  created() {
+    // Get users from localStorage
+    this.users = JSON.parse(localStorage.getItem('users')) || [];
+  },
 };
 </script>
 
