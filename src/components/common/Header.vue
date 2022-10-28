@@ -27,6 +27,8 @@ export default {
   top: 0;
   left: 0;
 
+  overflow: hidden;
+
   &__logo {
     display: block;
     margin: 0 auto;

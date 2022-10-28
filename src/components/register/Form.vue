@@ -40,20 +40,23 @@
 
         <label for="registerGender">
           Sexo
-          <label for="registerFemale">
-            <input type="radio" name="gender" id="registerFemale" value="female" v-model="gender">
-            Feminino
-          </label>
 
-          <label for="registerMale">
-            <input type="radio" name="gender" id="registerMale" value="male" v-model="gender">
-            Masculino
-          </label>
+          <div class="register__form--gender">
+            <label for="registerFemale">
+              <input type="radio" name="gender" id="registerFemale" value="female" v-model="gender">
+              Feminino
+            </label>
 
-          <label for="registerOther">
-            <input type="radio" name="gender" id="registerOther" value="other" v-model="gender">
-            Outro
-          </label>
+            <label for="registerMale">
+              <input type="radio" name="gender" id="registerMale" value="male" v-model="gender">
+              Masculino
+            </label>
+
+            <label for="registerOther">
+              <input type="radio" name="gender" id="registerOther" value="other" v-model="gender">
+              Outro
+            </label>
+          </div>
         </label>
 
         <label for="registerPassword">
@@ -64,7 +67,7 @@
             name="registerPassword"
             v-model="password"
           />
-          <span>A senha deve ter no mínimo 6 caracteres</span>
+          <span class="register__form--rule">A senha deve ter no mínimo 6 caracteres</span>
         </label>
 
         <label for="registerConfirmPassword">
@@ -172,6 +175,85 @@ export default {
 
 </script>
 
-<style>
+<style scoped lang="scss">
+  .register__form {
+    background: $white;
+    padding: 2rem 3rem;
+    border-radius: 6px;
+    margin: 0 1rem;
+    max-width: 600px;
 
+    &--button {
+    margin: 2.7rem 0 1.5rem 0;
+      button {
+        @include button($white, $primary);
+      }
+    }
+
+    &--login {
+      p {
+        text-align: center;
+        margin-top: 1rem;
+        @include content-dark-md;
+
+        a {
+          @include content-primary-md;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    &--title {
+      @include title-md;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    &--fields {
+      // Display fields in a grid 2 columns in desktop and 1 column in mobile
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      label {
+        @include content-primary-md;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+
+        input, select {
+          @include content-dark-md;
+          padding: 0.5rem 1rem;
+          border: 1px solid $primary;
+          border-radius: 5px;
+
+          &:focus {
+            outline: 1px solid darken($primary, 10%);
+          }
+        }
+      }
+    }
+    &--gender {
+      display: flex;
+      gap: 0.5rem;
+      label {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
+    &--rule {
+      margin-top: 0.3rem;
+      font-size: 0.875rem;
+      color: $gray-dark;
+    }
+  }
 </style>
