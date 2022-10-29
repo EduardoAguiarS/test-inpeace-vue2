@@ -58,7 +58,7 @@ export default {
 
       // If user exists, check if password is correct
       if (user && user.password === this.password) {
-        this.$router.push('/register');
+        this.$router.push('/manage');
       } else {
         this.error = 'Usuário ou senha incorretos';
       }

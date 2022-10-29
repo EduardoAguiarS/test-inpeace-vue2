@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <PageHeader />
-    <router-view/>
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -17,4 +19,16 @@ export default {
 
 <style lang="scss">
 @import "@/assets/scss/_normalizes.scss";
+
+#app {
+  overflow: hidden;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+  transform: translateX(2rem);
+}
+.fade-enter-active, .fade-leave-active {
+  transition: all 0.3s ease;
+}
 </style>
