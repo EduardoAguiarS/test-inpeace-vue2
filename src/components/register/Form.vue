@@ -86,7 +86,7 @@
       </div>
       <div class="register__form--login">
         <p>
-          Já possui conta? <router-link to="/">Faça login aqui</router-link>
+          Já possui conta? <router-link to="/">Entre aqui</router-link>
         </p>
       </div>
     </form>
@@ -181,10 +181,10 @@ export default {
     padding: 2rem 3rem;
     border-radius: 6px;
     margin: 0 1rem;
-    max-width: 600px;
 
     &--button {
-    margin: 2.7rem 0 1.5rem 0;
+      margin: 2.7rem auto 1.5rem auto;
+      width: 50%;
       button {
         @include button($white, $primary);
       }
@@ -251,8 +251,9 @@ export default {
     }
 
     &--rule {
+      @include content-gray-md;
       margin-top: 0.3rem;
-      font-size: 0.875rem;
+      font-size: 0.725rem;
       color: $gray-dark;
     }
   }
