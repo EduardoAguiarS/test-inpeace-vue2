@@ -141,5 +141,13 @@ export default {
         }
       }
     }
+
+    &--error {
+      margin-top: 1rem;
+      text-align: center;
+      span {
+        @include content-danger-md;
+      }
+    }
   }
 </style>

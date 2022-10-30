@@ -256,5 +256,13 @@ export default {
       font-size: 0.725rem;
       color: $gray-dark;
     }
+
+    &--error {
+      margin-top: 1rem;
+      text-align: center;
+      span {
+        @include content-danger-md;
+      }
+    }
   }
 </style>

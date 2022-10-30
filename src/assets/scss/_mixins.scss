@@ -85,6 +85,15 @@
   color: $gray;
 }
 
+@mixin content-danger-md {
+  font-family: $helvetica;
+  font-size: 1rem;
+  font-weight: medium;
+  line-height: 1.4;
+
+  color: $danger;
+}
+
 @mixin content-dark-md {
   font-family: $helvetica;
   font-size: 1rem;
