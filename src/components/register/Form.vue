@@ -180,7 +180,7 @@ export default {
     background: $white;
     padding: 2rem 3rem;
     border-radius: 6px;
-    margin: 0 1rem;
+    margin: 0 1rem 2rem 1rem;
 
     &--button {
       margin: 2.7rem auto 1.5rem auto;
