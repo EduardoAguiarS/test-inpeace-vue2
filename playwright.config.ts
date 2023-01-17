@@ -98,10 +98,10 @@ const config: PlaywrightTestConfig = {
   // outputDir: 'test-results/',
 
   /* Run your local dev server before starting the tests */
-  webServer: {
-    command: 'yarn serve',
-    port: 8080,
-  },
+  // webServer: {
+  //   command: 'yarn serve',
+  //   port: 8080,
+  // },
 };
 
 export default config;
