@@ -1,6 +1,6 @@
 <template>
   <div class="login__form">
-    <h3 class="login__form--title">Acessar</h3>
+    <h3 class="login__form--title">Logar</h3>
 
     <!-- Login form -->
     <form @submit.prevent="login">
