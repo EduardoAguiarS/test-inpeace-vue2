@@ -17,7 +17,7 @@
       </li>
     </ul>
     <div class="manage__users--others">
-      <button class="logout__button" @click="logout">Sair</button>
+      <button class="logout__button" @click="logout" data-test="logout">Sair</button>
       <span class="manage__users--qtd">mostrando {{ users.length }} de {{ total   }}</span>
     </div>
   </div>
