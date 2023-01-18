@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test('Register and Login', async ({ page }) => {
   // Go to the page
-  await page.goto('localhost:8080');
+  await page.goto('/');
 
   // Access the register page
   await page.locator('[data-test="register"]').click();
