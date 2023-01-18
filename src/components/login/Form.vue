@@ -31,8 +31,11 @@
         <button type="submit" data-test="submit">Entrar</button>
       </div>
       <div class="login__form--register">
-        <p data-test="register">
-          Não possui conta? <router-link to="/register">Cadastre-se aqui</router-link>
+        <p>
+          Não possui conta?
+          <router-link to="/register" data-test="register">
+            Cadastre-se aqui
+          </router-link>
         </p>
       </div>
     </form>
