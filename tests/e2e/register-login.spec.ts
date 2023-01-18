@@ -26,11 +26,12 @@ test('Register and Login', async ({ page }) => {
   const user = localStorage[localStorage.length - 1];
 
   // Login
-  await page.locator('[data-test="email"]').click();
   await page.locator('[data-test="email"]').fill(user.email);
-  await page.locator('[data-test="password"]').click();
   await page.locator('[data-test="password"]').fill(user.password);
   await page.locator('[data-test="submit"]').click();
+
+  // Wait for component to be visible
+  await page.locator('.manage__users--list').waitFor({ state: 'visible' });
 
   // Logout
   await page.locator('[data-test="logout"]').click();
