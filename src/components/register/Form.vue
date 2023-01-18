@@ -12,6 +12,7 @@
             id="registerName"
             name="registerName"
             v-model="name"
+            data-test="rName"
           />
         </label>
 
@@ -22,6 +23,7 @@
             id="registerEmail"
             name="registerEmail"
             v-model="email"
+            data-test="rEmail"
           />
         </label>
 
@@ -31,6 +33,7 @@
             id="registerState"
             name="registerState"
             v-model="state"
+            data-test="rState"
           >
             <option v-for="state in states" :value="state.sigla" :key="state.singla">
               {{ state.nome }}
@@ -42,17 +45,17 @@
           Sexo
 
           <div class="register__form--gender">
-            <label for="registerFemale">
+            <label for="registerFemale" data-test="rFemale">
               <input type="radio" name="gender" id="registerFemale" value="female" v-model="gender">
               Feminino
             </label>
 
-            <label for="registerMale">
+            <label for="registerMale" data-test="rMale">
               <input type="radio" name="gender" id="registerMale" value="male" v-model="gender">
               Masculino
             </label>
 
-            <label for="registerOther">
+            <label for="registerOther" data-test="rOther">
               <input type="radio" name="gender" id="registerOther" value="other" v-model="gender">
               Outro
             </label>
@@ -66,6 +69,7 @@
             id="registerPassword"
             name="registerPassword"
             v-model="password"
+            data-test="rPassword"
           />
           <span class="register__form--rule">A senha deve ter no mínimo 6 caracteres</span>
         </label>
@@ -77,12 +81,13 @@
             id="registerConfirmPassword"
             name="registerConfirmPassword"
             v-model="confirmPassword"
+            data-test="rConfirm"
           />
         </label>
       </div>
 
       <div class="register__form--button">
-        <button type="submit">Cadastrar</button>
+        <button type="submit" data-test="rSubmit">Cadastrar</button>
       </div>
       <div class="register__form--login">
         <p>

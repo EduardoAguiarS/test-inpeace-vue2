@@ -12,6 +12,7 @@
             id="loginEmail"
             name="loginEmail"
             v-model="email"
+            data-test="email"
           />
         </label>
 
@@ -22,14 +23,15 @@
             id="loginPassword"
             name="loginPassword"
             v-model="password"
+            data-test="password"
           />
         </label>
       </div>
       <div class="login__form--button">
-        <button type="submit">Entrar</button>
+        <button type="submit" data-test="submit">Entrar</button>
       </div>
       <div class="login__form--register">
-        <p>
+        <p data-test="register">
           Não possui conta? <router-link to="/register">Cadastre-se aqui</router-link>
         </p>
       </div>
