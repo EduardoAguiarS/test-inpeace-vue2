@@ -36,7 +36,8 @@ test('Register and Login', async ({ page }) => {
   await page.locator('[data-test="submit"]').click();
 
   // Wait for component to be visible
-  await page.locator('.manage__users--list').waitFor({ state: 'visible' });
+  await page.locator('.manage__users--list')
+    .waitFor({ state: 'visible' });
 
   // Logout
   await page.locator('[data-test="logout"]').click();
