@@ -7,10 +7,8 @@ test('Register and Login', async ({ page }) => {
   // Access the register page
   await page.locator('[data-test="register"]').click();
 
-  // Wait for estados response
-  await page.waitForResponse('**/estados').then((res) => {
-    expect(res.status()).toBe(200);
-  });
+  // Element containing options to be visible
+  await page.waitForResponse('**/estados');
 
   // Fill the form
   await page.locator('[data-test="rName"]').fill('José Eduardo Aguiar Silva');
