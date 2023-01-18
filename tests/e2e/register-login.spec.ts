@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test('Register and Login', async ({ page }) => {
   // Go to the page
@@ -6,6 +6,11 @@ test('Register and Login', async ({ page }) => {
 
   // Access the register page
   await page.locator('[data-test="register"]').click();
+
+  // Wait for estados response
+  await page.waitForResponse('**/estados').then((res) => {
+    expect(res.status()).toBe(200);
+  });
 
   // Fill the form
   await page.locator('[data-test="rName"]').fill('José Eduardo Aguiar Silva');
